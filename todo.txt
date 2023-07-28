@@ -1,0 +1,2 @@
+--> Ensure that tesseract is first fully loaded
+--> Give an error for an unsupported site

@@ -1,0 +1,36 @@
+when sending async stuff using runtime
+
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse)
+
+    urfunction().then(sendResponse)
+
+    return true
+
+    OR
+
+    async function test(){
+        ur code here
+        sendResponse(ur result)
+    }
+
+    test()
+    return true
+    ============================
+
+    function GetViewportScreenshot(){
+    return new Promise(function(resolve,reject){
+
+        setTimeout(function(){
+            chrome.tabs.captureVisibleTab({format:"png"},function(viewport_screenshot){
+                if(viewport_screenshot){resolve(viewport_screenshot)}
+                
+            })
+        },50)
+
+    })
+
+}
+
+this is how u delay a bit
+
+==============

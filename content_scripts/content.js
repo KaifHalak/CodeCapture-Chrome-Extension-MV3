@@ -37,11 +37,11 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
                 return
             }
 
-            if (!FLAGS.workers_init){
+            if (!FLAGS.workers_init){ //Dont do anything till the workers initialize
                 return
             }
 
-            if (FLAGS.jcrop){
+            if (FLAGS.jcrop){  // Remove selection tool if user clicks the icon a second time
                 FLAGS.jcrop.destroy()
                 FLAGS.jcrop = null
 
@@ -252,6 +252,8 @@ function FindHighestConfidenceResult(img){
         CreateTextNotification("Error! Please Select A Region")
         return
     }
+
+    //Data to be used by sidebysideUI\script.js
     chrome.storage.local.set({
         img: img,
         confidence: highest_confidence,
@@ -270,6 +272,7 @@ function FindHighestConfidenceResult(img){
 
 
 function EditImage(canvas,img_info){
+    // Performing OCR on four different images and utilizing the result with the highest confidence level.
     let context, canvas_copy, worker_index
     for (let i = 0; i < 4; i++){
         switch (i){

@@ -1,3 +1,4 @@
+// To store OCR resuls from content.js
 const OCRResult = {
     img: null,
     confidence: null,
@@ -97,6 +98,8 @@ function CheckIfScriptAlreadyInjected(tabId){
 // Chrome Notifications
 
 function CreateTextNotification(msg){
+
+    // Clear all previous notifications
 
     notification_ids.forEach(function(id){
         setTimeout(function(){chrome.notifications.clear(id)},500)

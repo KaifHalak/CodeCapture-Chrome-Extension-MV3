@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .overlay-screenshot-extension{
     position: absolute;
     top:0px;
     left: 0px;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay-screenshot-extension,
@@ -17,4 +20,50 @@
 .jcrop-holder {
     position: fixed !important; top: 0 !important; left: 0 !important;
     z-index: 2147483647 !important;
+  }
+
+
+/* Progress Bar when loading workers */
+
+.progress-bar-window{
+    background-color: white;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 90px;
+    border: 2px solid black;
+    z-index: 10000;
+  } 
+  
+.text-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:black
+  }
+  
+.progress-bar{
+    position: relative;
+    width:0px;
+    height: 10px;
+    background-color: blue !important;
+    margin:10px;
+    border-radius: 5px;
+    top: -10px;
+    left: -10px;
+    transition: width 0.1s ease-in-out;
+  }
+  
+.progress-bar-container{
+    border-radius: 5px;
+    margin:10px;
+    width: -webkit-fill-available;
+    height: 10px;
+    border: 1px solid black;
   }

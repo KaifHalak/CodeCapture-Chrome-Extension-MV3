@@ -1,23 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "OCR",
+  "name": "Code Capture",
   "version": "1.0",
-  "description": "OCR",
-  "permissions": ["scripting","tabs","notifications"],
+  "description": "Extract Code from Videos",
+  "permissions": ["scripting","tabs","notifications","storage"],
   "background": {
-    "service_worker": "scripts/background.js",
+    "service_worker": "background_scripts/background.js",
     "type":"module"
   },
   "host_permissions": ["<all_urls>"],
-  "action": {"default_title": "Click Me"},
-  "web_accessible_resources": [
-		{
-			"resources": ["./packages/tesseract.min.js","./packages/Jcrop.gif"],
-			"matches": ["<all_urls>"],
-			"use_dynamic_url": true
-		}
-	],
   "content_security_policy": {
 		"extension_pages":  "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
-	}
+	},
+  "action": {
+    "default_title": "Capture Code",
+    "default_icon": {
+      "16": "DisplayIcons/16.png",  
+      "48": "DisplayIcons/48.png",  
+      "128": "DisplayIcons/128.png" 
+    }
+  },
+  "icons": {
+    "16": "DisplayIcons/16.png",    
+    "48": "DisplayIcons/48.png",   
+    "128": "DisplayIcons/128.png"  
+  }
 }

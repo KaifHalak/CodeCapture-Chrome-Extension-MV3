@@ -34,3 +34,26 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse)
 this is how u delay a bit
 
 ==============
+    transform: translate(-50%, -50%);
+    use this to center something on a screen
+
+=============
+
+If u change either the width or height of an image, the image will resize
+proportionally (keeping the aspect ratio)
+
+when using a slider, user ParseInt(slider.value) or Parsefloat to fix the problem
+where the img somtimes increases in size whereas it had to decrease
+
+
+===============
+
+when creating a new tab with a new html file, 
+first create the tab
+use chrome.tabs.onUpdated to ensure that its loaded
+THEN send it data if needed
+
+==================
+
+
+use textArea.innerHTML = ur text, in order to show \n. (there might be securtiy concerns)

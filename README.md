@@ -48,4 +48,4 @@ Links to some of the features used by this extension:
 
 ### Chrome Store:
 
-Coming Soon
+[Chrome Web Store](https://chrome.google.com/webstore/detail/code-capture/ibkjgebmefpibfipgfaphonpdljaekni)
